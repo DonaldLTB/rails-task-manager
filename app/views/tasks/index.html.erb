@@ -1,0 +1,5 @@
+<h1>My Tasks</h1>
+<% @tasks.each do |task| %>
+  <h3><%= task.completed == true ? "[X]" : "[ ]"%> <%= link_to task.title.capitalize, tasks_path(task) %></h3>
+  <p><%= task.details %></p>
+<% end %>
